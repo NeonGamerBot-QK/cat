@@ -17,4 +17,4 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
             cd /root
-            bash ./deploy.sh ${{ github.event.repository.name }} cat "npm install" "PUBLIC_URL=/cat npm run build"
+            PUBLIC_URL=/cat bash ./deploy_project.sh ${{ github.event.repository.name }} cat "npm install" "npm run build"

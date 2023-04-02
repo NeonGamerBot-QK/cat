@@ -20,7 +20,7 @@ fetch("https://api.thecatapi.com/v1/images/search").then(r => r.json()).then((js
 
 {
   imgSrc ? 
-  <img src={imgSrc} className="max-w-md rounded-lg shadow-2xl" />
+  <img src={imgSrc  || "https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca_w200.gif"} className="max-w-sm rounded-lg shadow-2xl" />
 : null
 }    <div>
       <h1 className="text-5xl font-bold">Cute Cat</h1>

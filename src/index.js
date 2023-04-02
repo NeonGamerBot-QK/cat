@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Particle from './Particle.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+if(window.location.protocol === "http:") window.location.protocol = "https:"
 root.render(
   <React.StrictMode>
     <App />
