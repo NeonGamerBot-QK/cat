@@ -3,11 +3,16 @@
  * particle effect.
  * @returns A function that returns a Particles component.
  */
-import React from "react";
+import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 function Particle() {
   const pRef = React.useRef(null);
 // alert("E")
+const particlesInit = useCallback ((main) => {
+  // alert("loaded")
+  loadFull(main)
+}, [])
   return (
     <Particles
       id="tsparticles"
@@ -191,9 +196,8 @@ function Particle() {
         //   size: "cover"
         // }
       }}
-      init={e => {
-        
-      }}
+      init={particlesInit}
+      loaded={() => console.log("loaded")}
       />
   );
 }

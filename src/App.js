@@ -1,8 +1,8 @@
-import {  useState } from "react";
+import {  useCallback, useState } from "react";
 import Particle from "./Particle.js"
-
 function App() {
   const [ imgSrc, setImgSrc] = useState();
+  
   (() => {
     if(!imgSrc) {
       setImgSrc(true)
@@ -13,11 +13,11 @@ fetch("https://api.thecatapi.com/v1/images/search").then(r => r.json()).then((js
   })()
   return (
     <>
-    <div>
-      <Particle />
-    </div>
+<Particle />
+
 <div className="hero min-h-screen z-1">
   <div className="hero-content flex-col lg:flex-row-reverse">
+
 {
   imgSrc ? 
   <img src={imgSrc} className="max-w-md rounded-lg shadow-2xl" />
@@ -29,11 +29,12 @@ fetch("https://api.thecatapi.com/v1/images/search").then(r => r.json()).then((js
     </div>
   </div>
 </div>
-<footer className="footer footer-center p-4 text-base-content">
+<footer className="footer footer-center p-4 text-base-content bg-base-200">
   <div>
     <p>Copyright © {new Date().getFullYear()} - All right reserved by <a target="_blank" href="https://saahild.com">Saahil</a></p>
   </div>
 </footer>
+
 </>
   );
 }
