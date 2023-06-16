@@ -1,8 +1,10 @@
 /* Importing the font Raleway from Google Fonts. */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 #tsparticles {
   position: fixed !important;
   /* background-repeat: no-repeat !important;
@@ -10,7 +12,9 @@
   width: 100%;
   height: 100%;
 }
+
 /* Setting the font to Raleway, the background color to a gradient, and the text to be antialiased. */
+
 body {
   /* Setting the margin to 0. */
   margin: 0;
